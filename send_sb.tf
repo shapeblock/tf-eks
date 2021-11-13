@@ -1,5 +1,6 @@
 provider "restapi" {
   uri                  = var.sb_url
+  write_returns_object = true
   headers = {
     X-Internal-Client = "abc123"
     Authorization = "5up3r53Cr3+123$"
