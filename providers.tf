@@ -3,10 +3,6 @@ terraform {
     aws = {
       source = "hashicorp/aws"
     }
-    restapi = {
-      source = "gavinbunney/restapi"
-      version = "1.15.4"
-    }    
   }
 }
 
