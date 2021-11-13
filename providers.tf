@@ -6,15 +6,6 @@ terraform {
     restapi = {
       source = "gavinbunney/restapi"
       version = "1.15.4"
-      uri                  = var.sb_url
-      debug                = true
-      write_returns_object = true
-
-      headers = {
-        X-Internal-Client = "abc123"
-        Authorization = "5up3r53Cr3+123$"
-        "Content-Type" = "application/json"
-      }
     }    
   }
 }
