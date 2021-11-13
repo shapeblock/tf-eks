@@ -5,6 +5,8 @@ module "eks_cluster" {
   subnets         = module.vpc.private_subnets
   enable_irsa     = true
   vpc_id          = module.vpc.vpc_id
+  write_kubeconfig                     = false
+  manage_aws_auth = true
 
   workers_group_defaults = {
     root_volume_type = "gp2"
