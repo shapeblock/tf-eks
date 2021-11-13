@@ -17,3 +17,7 @@ variable "cluster_version" {
   type        = string
 }
 
+variable "sb_url" {
+  description = "SB backend URL."
+  type        = string
+}

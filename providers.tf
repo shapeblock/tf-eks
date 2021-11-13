@@ -3,6 +3,10 @@ terraform {
     aws = {
       source = "hashicorp/aws"
     }
+    restapi = {
+      source = "gavinbunney/restapi"
+      version = "1.15.4"
+    }    
   }
 }
 
@@ -34,3 +38,4 @@ provider "helm" {
     token                  = data.aws_eks_cluster_auth.cluster.token
   }
 }
+
