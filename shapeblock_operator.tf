@@ -41,7 +41,7 @@ resource "kubernetes_deployment" "shapeblock_operator" {
 
           env {
             name = "CLUSTER_ID"
-            value = "da93036a-f43a-4dce-8dc8-55aff17d1201"
+            value = var.cluster_uuid
           }
 
           image_pull_policy = "Always"

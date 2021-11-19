@@ -21,3 +21,8 @@ variable "sb_url" {
   description = "SB backend URL."
   type        = string
 }
+
+variable "cluster_uuid" {
+  description = "Cluster UUID."
+  type        = string
+}
