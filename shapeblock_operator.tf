@@ -58,3 +58,14 @@ resource "kubernetes_deployment" "shapeblock_operator" {
   depends_on = [kubernetes_service_account.sb_admin]
 }
 
+resource "kubernetes_cluster_role" "sb_operator" {
+  metadata {
+    name = "sb-operator"
+  }
+
+  rule {
+    verbs      = ["get", "list", "create", "update", "delete", "patch", "watch"]
+    api_groups = ["dev.shapeblock.com"]
+    resources  = ["applications", "projects"]
+  }
+}
